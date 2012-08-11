@@ -59,3 +59,11 @@ Os projetos em que estou trabalhando atualmente podem ser acessados pelo meu [gi
 [U]: http://ubuntu.com/
 [VCF]: /files/ramaciotti.vcard
 [WK]: http://www.wk.com.br/
+
+<script src="/js/jquery-1.8.0.min.js"></script>
+<script>
+$(function () {
+  $(".icon-globe").parent().parent().removeClass("active");
+  $(".icon-user").parent().parent().addClass("active");
+});
+</script>
