@@ -10,6 +10,7 @@ import Data.Monoid (mempty, mconcat)
 import qualified Data.Map as M
 
 import Hakyll
+import Hakyll.Web.Feed
 
 main :: IO ()
 main = hakyllWith config $ do
@@ -88,6 +89,7 @@ main = hakyllWith config $ do
         -- compile rss
         match "ramaciotti.rss" $ route idRoute
         create "ramaciotti.rss" $ requireAll_ "posts/*"
+          >>> mapCompiler (arr $ copyBodyToField "description")
           >>> renderRss feedConfiguration
 
         return ()
