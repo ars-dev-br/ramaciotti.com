@@ -100,7 +100,11 @@ main = hakyllWith config $ do
       tagIdentifier :: String -> Identifier (Page String)
       tagIdentifier = fromCapture "tags/*"
 
-config = defaultHakyllConfiguration
+config = defaultHakyllConfiguration {
+           deployCommand = "rsync --checksum -e ssh -av _site/ \
+             \ramaciotti@pulcherrima.dreamhost.com:ramaciotti.com"
+         }
+
 feedConfiguration = FeedConfiguration {
                       feedTitle = "ramaciotti.com"
                     , feedDescription = "Textos sobre desenvolvimento de software."
