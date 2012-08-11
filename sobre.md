@@ -32,9 +32,10 @@ por atualizar automaticamente coisas como a página inicial. O segundo ajuda bas
 
 Além deles, utilizo também a [Font Awesome][FA], para os ícones que aparecem na
 barra de navegação, e o plugin [timeago][TA] para o [jQuery][JQ], que troca as
-datas no texto por mensagens como “há 5 meses”.
+datas no texto por mensagens como “há 5 meses”. Outra biblioteca que utilizo é a [Code Prettify][CP] da Google, para o *highlighting* dos códigos de exemplo.
 
-O código fonte do site está disponível no meu [github][GH], no repositório [ramaciotti.com][GHR].
+O código fonte do site está disponível no meu [github][GH], no repositório
+[ramaciotti.com][GHR].
 
 Sobre Software
 --------------
@@ -44,9 +45,11 @@ por software livre. Meus computadores rodam [Ubuntu][U] e desenvolvo usando o
 shell (zsh com [oh-my-zsh][OMZ]) e algum editor de textos (emacs ou vim,
 dependendo do caso).
 
-Os projetos em que estou trabalhando atualmente podem ser acessados pelo meu [github][GH].
+Os projetos em que estou trabalhando atualmente podem ser acessados pelo meu
+[github][GH].
 
 [BS]: http://twitter.github.com/bootstrap/
+[CP]: http://code.google.com/p/google-code-prettify/
 [F]: http://www.furb.br/
 [FA]: http://fortawesome.github.com/Font-Awesome/
 [GH]: http://github.com/ramaciotti
