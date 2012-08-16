@@ -1,7 +1,7 @@
 ---
 title: Separando Responsabilidades com Decorators
 author: André Ramaciotti
-tags: Python, Programação Orientada a Aspectos
+tags: Python, Orientação a Aspectos
 ---
 
 Todo material sobre organização de código escrito desde a década de 80 bate na

@@ -1,7 +1,7 @@
 ---
 title: Encapsulamento, Getters e Setters
 author: André Ramaciotti
-tags: Programação Orientada a Objetos
+tags: Orientação a Objetos
 ---
 
 Deparados com o problema de abstrair dados em um novo tipo, muitos programadores
