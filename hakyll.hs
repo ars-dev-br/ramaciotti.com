@@ -86,6 +86,13 @@ main = hakyllWith config $ do
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
 
+        -- compile recomendações
+        match "recomendacoes.md" $ do
+          route $ setExtension ".html"
+          compile $ pageCompiler
+            >>> applyTemplateCompiler "templates/default.html"
+            >>> relativizeUrlsCompiler
+
         -- compile rss
         match "ramaciotti.rss" $ route idRoute
         create "ramaciotti.rss" $ requireAll_ "posts/*"
