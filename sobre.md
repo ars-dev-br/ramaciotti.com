@@ -19,8 +19,6 @@ No momento, sou responsável pela área de treinamento técnico, ensinando C++ e
 avaliando os estagiários de programação da empresa. Além disso, participo da
 melhoria dos processos de desenvolvimento.
 
-[Chave pública (rsa)][RSA]
-
 Sobre o Site
 ------------
 
