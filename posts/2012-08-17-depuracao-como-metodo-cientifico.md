@@ -37,7 +37,7 @@ muito se um programador está depurando através de `printfs` ou através de um
 *debugger* cheio de recursos avançados como *breakpoints* e a possibilidade de
 inspecionar valores durante a execução do programa. Contanto que ele consiga
 obter *feedbacks* para avaliar e melhorar seu modelo mental, as ferramentas que
-ele disponíveis não afetarão muito sua produtividade.
+ele tem disponíveis não afetarão muito sua produtividade.
 
 De maneira inversa, de pouco adianta entregar o melhor depurador nas mãos de um
 programador inexperiente e esperar que sua produtividade aumente. Depurar não é
