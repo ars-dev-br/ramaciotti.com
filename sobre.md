@@ -3,37 +3,40 @@ title: Sobre
 author: André Ramaciotti
 ---
 
-Sobre o Autor
--------------
+<p class="pull-right">Última modificação: <time datetime="2012-09-22" class="timeago">2012-09-22</time></p>
+
+Sobre mim
+---------
 
 [<img class="pull-right" alt="qrcode com informações de contato" src="/img/ramaciotti.vcard.png" width="210" height="210"/>][VCF]
 
 Meu nome é André Ramaciotti da Silva. Nasci em 1990 em São Paulo, onde cresci e
 tomei gosto por programação, música e a aprender idiomas estrangeiros.
+Atualmente, moro em Blumenau, curso Ciência da Computação na [FURB][F] e
+trabalho na [WK Sistemas][WK] desde 2010.
 
-Atualmente, moro em Blumenau. Curso Ciência da Computação na [FURB][F] e
-trabalho na [WK Sistemas][WK] desde 2010. Já passei por diversas áreas, da
-*Quality Assurance* à programação em C++, C# e Javascript.
-
-No momento, sou responsável pela área de treinamento técnico, ensinando C++ e
-avaliando os estagiários de programação da empresa. Além disso, participo da
-melhoria dos processos de desenvolvimento.
+Lá, passei por diversas áreas, da *Quality Assurance* à programação em C++, C#
+e Javascript. No momento, sou responsável pela área de treinamento técnico,
+ensinando C++ e avaliando os estagiários de programação da empresa. Além disso,
+participo da melhoria dos processos de desenvolvimento.
 
 Sobre o Site
 ------------
 
-Este site é construído sobre diversas bibliotecas open source. As duas
-principais são o [Hakyll][H] e o [Bootstrap][BS]. O primeiro me permite
-escrever os artigos em formatos mais agradáveis de serem escritos (como
-*markdown,* por exemplo) e os converte em HTML. Além disso, ele é o responsável
-por atualizar automaticamente coisas como a página inicial. O segundo ajuda bastante na apresentação visual do site.
+Este site trata majoritariamente sobre programação, desde características de
+determinada linguagem até os processos envolvidos no desenvolvimento de
+software. Se eu tiver vontade de escrever sobre algum assunto off-topic,
+provavelmente o farei em outro lugar.
 
-Além deles, utilizo também a [Font Awesome][FA], para os ícones que aparecem na
-barra de navegação, e o plugin [timeago][TA] para o [jQuery][JQ], que troca as
-datas no texto por mensagens como “há 5 meses”. Outra biblioteca que utilizo é a [Code Prettify][CP] da Google, para o *highlighting* dos códigos de exemplo.
+Tecnologicamente, o site foi construido em cima do [Bootstrap][BS] e do
+[Hakyll][H].  Se você tiver curiosidade de ver como ele foi feito, o código
+está disponível no meu [Github][GH], no repositório [ramaciotti.com][GHR]. Além
+desses dois projetos, também faço uso dos abaixo:
 
-O código fonte do site está disponível no meu [github][GH], no repositório
-[ramaciotti.com][GHR].
+ * [Font Awesome][FA]
+ * [timeago][TA]
+ * [jQuery][JQ]
+ * [Code Prettify][CP]
 
 Sobre Software
 --------------
