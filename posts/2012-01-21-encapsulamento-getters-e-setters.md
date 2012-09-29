@@ -45,7 +45,7 @@ struct ponto_t {
 
 Além disso, a sobreabundância de *getters* e *setters* pelo código é sinal de
 outro problema: os objetos estão sendo utilizados apenas como local de
-armazenamento de informação e sua lógia inerente está sendo representada em
+armazenamento de informação e sua lógica inerente está sendo representada em
 outra parte do programa. Considere o trecho a seguir.
 
 ~~~~{.Cpp}
