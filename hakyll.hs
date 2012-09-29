@@ -48,6 +48,7 @@ main = hakyllWith config $ do
           route $ setExtension ".html"
           compile $ pageCompiler
             >>> arr (renderDateField "timestamp" "%Y-%m-%d" "Data desconhecida")
+            >>> renderModificationTime "modified" "%Y-%m-%d"
             >>> renderTagsField "posttags" (fromCapture "tags/*")
             >>> applyTemplateCompiler "templates/post-body.html"
             >>> applyTemplateCompiler "templates/default.html"
