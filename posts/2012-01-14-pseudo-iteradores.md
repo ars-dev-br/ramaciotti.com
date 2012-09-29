@@ -20,7 +20,7 @@ vai computando conforme é utilizado.
 Abaixo, segue um exemplo de pseudo-iterador que gera infinitos números de
 Fibonacci. Outros exemplos de pseudo-operadores que podem ser criados assim são:
 uma lista com todos os números naturais, com todos os números triangulares ou
-com todos os fatoriais.
+com todos os fatoriais. Outro exemplo, menos matemático, seria a criação de um iterador que lesse um arquivo linha a linha.
 
 ~~~~{.Cpp}
 #include <algorithm>
