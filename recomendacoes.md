@@ -26,10 +26,20 @@ de sistemas operacionais baseados no Unix.
 Livros
 ------
 
-[Domain-Driven Design][DDD]: Com a utilização de orientação a objetos e
-*patterns,* Eric Evans mostra como o código e o modelo do problema sendo
+[Patterns of Enterprise Application Architecture][PEAA]: Martin Fowler cataloga
+diversos padrões de projeto úteis no desenvolvimento de aplicações orientadas a
+objetos. Embora Fowler diga que o foco maior do livro seja aplicações
+corporativas, muitos dos *patterns* têm usos em outros domínios também. Uma
+lista dos padrões apresentados no livro podem ser vistos [aqui][PEAAC].
+
+[Domain-Driven Design][DDD]: Com a utilização de orientação a objetos e *design
+patterns,* Eric Evans mostra como o código e o modelo do problema sendo
 resolvido devem ser duas partes de uma mesma coisa, e não elementos
 completamente separados.
+
+[PEAA]: http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/
+
+[PEAAC]: http://www.martinfowler.com/eaaCatalog/
 
 [DDD]: http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/
 
