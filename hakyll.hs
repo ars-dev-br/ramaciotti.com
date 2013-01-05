@@ -110,7 +110,7 @@ main = hakyllWith config $ do
 
 config = defaultHakyllConfiguration {
            deployCommand = "rsync --checksum -e ssh -av _site/ \
-             \ramaciotti@pulcherrima.dreamhost.com:ramaciotti.com"
+             \serenity.ramaciotti.com:/srv/www/www.ramaciotti.com/public"
          }
 
 feedConfiguration = FeedConfiguration {
