@@ -4,19 +4,19 @@ author: André Ramaciotti
 tags: C
 ---
 
-Quem conhece funções anônimas (também conhecidas por expressões lambda) de
-outras linguagens talvez já tenha sentido sua falta quando resolvendo certos
-problemas em C[^l1].
+Quem conhece funções anônimas (também chamadas de expressões lambda) de outras
+linguagens talvez já tenha sentido sua falta quando resolvendo certos problemas
+em C[^l1].
 
 [^l1]: Com a chegada do padrão C++11, isso deixou de ser um problema para
-programadores C++, mas mesmo o vindouro padrão C1X não faz qualquer referência a
+programadores C++.  No entanto, o padrão C11 não faz qualquer referência a
 funções anônimas.
 
-Porém, se seu projeto só será compilado usando o compilador GNU, uma boa parte
-de seus problemas pode ser resolvida com a utilização de um macro e de duas
-extensões. O uso dessas extensões significa que seu código deixará de seguir o
-padrão ISO e, portanto, **deixará de ser portável**. Se isso é um problema ou
-não, você que deverá julgar.
+Porém, se seu projeto só será compilado usando o GCC, boa parte de seus
+problemas pode ser resolvida com a utilização de um macro e de duas extensões. O
+uso dessas extensões significa que seu código deixará de seguir o padrão ISO e,
+portanto, **deixará de ser portável**. Se isso é um problema ou não, você que
+deverá julgar.
 
 Primeiramente, o macro:
 
@@ -34,8 +34,8 @@ expande:
 
 ~~~~ {.C}
 int (*max)(int, int) = lambda(int, (int a, int b) {
-         return a > b ? a : b;
-    });
+                           return a > b ? a : b;
+                       });
 
 int (*max)(int, int) = ({
     int __fn__ (int a, int b) {
@@ -90,9 +90,9 @@ int main() {
     int soma = 0;
 
     map(array, 4, lambda(int, (int x) {
-                soma += x;
-                return x;
-            }));
+                      soma += x;
+                      return x;
+                  }));
     printf("%d\n", soma);
 
     return 0;
@@ -111,9 +111,9 @@ Por outro lado, a função abaixo não funcionará:
 
 int (*adder(int what))(int) {
     return lambda(int, (int x) {
-            int __inc = what;
-            return x + __inc;
-        });
+               int __inc = what;
+               return x + __inc;
+           });
 }
 
 int main() {
