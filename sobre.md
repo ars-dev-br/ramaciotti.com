@@ -3,6 +3,7 @@ title: Sobre
 author: André Ramaciotti
 ---
 
+<div style="max-width: 720px; margin: 0 auto;">
 <p class="pull-right">Última modificação: <time datetime="2012-09-22" class="timeago">2012-09-22</time></p>
 
 Sobre mim
@@ -63,6 +64,8 @@ Os projetos em que estou trabalhando atualmente podem ser acessados pelo meu
 [U]: http://ubuntu.com/
 [VCF]: /files/ramaciotti.vcard
 [WK]: http://www.wk.com.br/
+
+</div>
 
 <script src="/js/jquery-1.8.0.min.js"></script>
 <script>

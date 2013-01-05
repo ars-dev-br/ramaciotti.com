@@ -3,6 +3,9 @@ title: Recomendações
 author: André Ramaciotti
 ---
 
+<div style="max-width: 720px; margin: 0 auto;">
+<p class="pull-right">Última modificação: <time datetime="2012-09-22" class="timeago">2012-09-22</time></p>
+
 Recomendações
 =============
 
@@ -70,6 +73,8 @@ Integration* e *Delivery* ao desenvolver um novo sistema para a
 
 [TW]: http://www.thoughtworks.com/
 [SPR]: http://www.springer.com/
+
+</div>
 
 <script src="/js/jquery-1.8.0.min.js"></script>
 <script>
