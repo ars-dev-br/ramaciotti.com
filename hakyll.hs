@@ -109,7 +109,7 @@ main = hakyllWith config $ do
       tagIdentifier = fromCapture "tags/*"
 
 config = defaultHakyllConfiguration {
-           deployCommand = "rsync --checksum -e ssh -av _site/ \
+           deployCommand = "rsync --checksum -e \"ssh -p 30000\" -av _site/ \
              \serenity.ramaciotti.com:/srv/www/www.ramaciotti.com/public"
          }
 
