@@ -12,14 +12,14 @@ Sobre mim
 [<img class="pull-right" alt="qrcode com informações de contato" src="/img/ramaciotti.vcard.png" width="210" height="210"/>][VCF]
 
 Meu nome é André Ramaciotti da Silva. Nasci em 1990 em São Paulo, onde cresci e
-tomei gosto por programação, música e a aprender idiomas estrangeiros.
+tomei gosto por programação, música e por aprender idiomas estrangeiros.
 Atualmente, moro em Blumenau, curso Ciência da Computação na [FURB][F] e
 trabalho na [WK Sistemas][WK] desde 2010.
 
-Lá, passei por diversas áreas, da *Quality Assurance* à programação em C++, C#
-e Javascript. No momento, sou responsável pela área de treinamento técnico,
-ensinando C++ e avaliando os estagiários de programação da empresa. Além disso,
-participo da melhoria dos processos de desenvolvimento.
+Lá, passei por diversas áreas, da *Quality Assurance* à programação em C++, da
+programação ao treinamento C++, e do treinamento de volta à programação, mas
+agora em C#.  Além disso, participo da melhoria dos processos de
+desenvolvimento.
 
 Sobre o Site
 ------------
@@ -42,14 +42,15 @@ desses dois projetos, também faço uso dos abaixo:
 Sobre Software
 --------------
 
-Procuro ser pragmático em minhas escolhas, mas não escondo minha preferência
-por software livre. Meus computadores rodam [Ubuntu][U] e desenvolvo usando o
-shell (zsh com [oh-my-zsh][OMZ]) e algum editor de textos (emacs ou vim,
-dependendo do caso).
+Procuro ser pragmático em minhas escolhas, mas não escondo minha preferência por
+software livre. Meus computadores rodam [Arch Linux][AR] e geralmente desenvolvo
+usando o shell (zsh com [oh-my-zsh][OMZ]) e algum editor de textos (emacs ou
+vim, dependendo do caso).
 
 Os projetos em que estou trabalhando atualmente podem ser acessados pelo meu
 [github][GH].
 
+[AR]: http://archlinux.org/
 [BS]: http://twitter.github.com/bootstrap/
 [CP]: http://code.google.com/p/google-code-prettify/
 [F]: http://www.furb.br/
