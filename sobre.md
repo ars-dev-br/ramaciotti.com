@@ -13,13 +13,11 @@ Sobre mim
 
 Meu nome é André Ramaciotti da Silva. Nasci em 1990 em São Paulo, onde cresci e
 tomei gosto por programação, música e por aprender idiomas estrangeiros.
-Atualmente, moro em Blumenau, curso Ciência da Computação na [FURB][F] e
-trabalho na [WK Sistemas][WK] desde 2010.
+Atualmente, moro em Blumenau, curso Ciência da Computação na [FURB][F].
 
-Lá, passei por diversas áreas, da *Quality Assurance* à programação em C++, da
-programação ao treinamento C++, e do treinamento de volta à programação, mas
-agora em C#.  Além disso, participo da melhoria dos processos de
-desenvolvimento.
+Já trabalhei em algumas áreas dentro do desenvolvimento de software, incluindo
+*Quality Assurance*, desenvolvimento web -- em ASP Clássico com C++, em ASP.Net
+WebForms e em ASP.Net MVC -- e instrutor de treinamento em C++.
 
 Sobre o Site
 ------------
@@ -64,7 +62,6 @@ Os projetos em que estou trabalhando atualmente podem ser acessados pelo meu
 [TA]: http://timeago.yarp.com/
 [U]: http://ubuntu.com/
 [VCF]: /files/ramaciotti.vcard
-[WK]: http://www.wk.com.br/
 
 </div>
 
