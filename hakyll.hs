@@ -15,7 +15,7 @@ import Hakyll.Web.Feed
 main :: IO ()
 main = hakyllWith config $ do
         -- copy css (it's alredy minified by less)
-        match "css/*.min.css" $ do
+        match "css/*.css" $ do
           route idRoute
           compile copyFileCompiler
 
@@ -47,8 +47,8 @@ main = hakyllWith config $ do
         match "posts/*" $ do
           route $ setExtension ".html"
           compile $ pageCompiler
-            >>> arr (renderDateField "timestamp" "%Y-%m-%d" "Data desconhecida")
-            >>> renderModificationTime "modified" "%Y-%m-%d"
+            >>> arr (renderDateField "timestamp" "%d/%m/%Y" "Data desconhecida")
+            >>> renderModificationTime "modified" "%d/%m/%Y"
             >>> renderTagsField "posttags" (fromCapture "tags/*")
             >>> applyTemplateCompiler "templates/post-body.html"
             >>> applyTemplateCompiler "templates/default.html"
@@ -128,4 +128,3 @@ makeTagList tag posts = constA posts
                           >>> applyTemplateCompiler "templates/post-list.html"
                           >>> applyTemplateCompiler "templates/default.html"
                           >>> relativizeUrlsCompiler
-

@@ -7,4 +7,4 @@ cabal-dev
 hakyll
 _cache/*
 _site/*
-
+site.min.css

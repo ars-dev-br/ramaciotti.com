@@ -3,8 +3,7 @@ title: Sobre
 author: André Ramaciotti
 ---
 
-<div style="max-width: 720px; margin: 0 auto;">
-<p class="pull-right">Última modificação: <time datetime="2012-09-22" class="timeago">2012-09-22</time></p>
+<p class="pull-right" style="margin-top: 0px">Última modificação: <time datetime="2012-09-22" class="timeago">2012-09-22</time></p>
 
 Sobre mim
 ---------
@@ -62,13 +61,3 @@ Os projetos em que estou trabalhando atualmente podem ser acessados pelo meu
 [TA]: http://timeago.yarp.com/
 [U]: http://ubuntu.com/
 [VCF]: /files/ramaciotti.vcard
-
-</div>
-
-<script src="/js/jquery-1.8.0.min.js"></script>
-<script>
-$(function () {
-  $(".icon-globe").parent().parent().removeClass("active");
-  $(".icon-user").parent().parent().addClass("active");
-});
-</script>

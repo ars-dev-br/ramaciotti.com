@@ -3,11 +3,10 @@ title: Recomendações
 author: André Ramaciotti
 ---
 
-<div style="max-width: 720px; margin: 0 auto;">
 <p class="pull-right">Última modificação: <time datetime="2012-09-22" class="timeago">2012-09-22</time></p>
 
 Recomendações
-=============
+-------------
 
 Seguem recomendações de artigos, livros, sites e vídeos que acho interessantes
 como programador. Dentro das categorias, os itens estão ordenados por ordem de
@@ -73,14 +72,3 @@ Integration* e *Delivery* ao desenvolver um novo sistema para a
 
 [TW]: http://www.thoughtworks.com/
 [SPR]: http://www.springer.com/
-
-</div>
-
-<script src="/js/jquery-1.8.0.min.js"></script>
-<script>
-$(function () {
-  $(".icon-globe").parent().parent().removeClass("active");
-  $(".icon-ok-sign").parent().parent().addClass("active");
-});
-</script>
-
