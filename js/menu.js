@@ -4,12 +4,6 @@ var ars = (function () {
     var body = document.getElementsByTagName("body")[0];
     var menuTrigger = document.getElementById("menu-trigger");
 
-    function isMobile() {
-        return (('ontouchend' in window))/* ||
-            (navigator.maxTouchPoints > 0) ||
-            (navigator.msMaxTouchPoints > 0));*/
-    }
-
     function isChildOf(child, parent) {
         if(child === null)
             return false;
@@ -20,10 +14,10 @@ var ars = (function () {
     }
 
     function closeMenu(evt) {
-        var eventType = isMobile() ? "touchend" : "click";
         if(!isChildOf(evt.target, "menu") && evt.target.id !== "menu-trigger") {
             body.classList.remove("show-menu");
-            document.removeEventListener(eventType, closeMenu);
+            document.removeEventListener("touchend", closeMenu);
+            document.removeEventListener("click", closeMenu);
         }
     }
 
@@ -33,14 +27,14 @@ var ars = (function () {
 
         body.classList.add("show-menu");
 
-        var eventType = isMobile() ? "touchend" : "click";
-        document.addEventListener(eventType, closeMenu);
+        document.addEventListener("touchend", closeMenu);
+        document.addEventListener("click", closeMenu);
     }
 
     function onload() {
         body.classList.remove("no-js");
-        var eventType = isMobile() ? "touchend" : "click";
-        menuTrigger.addEventListener(eventType, openMenu);
+        menuTrigger.addEventListener("touchend", openMenu);
+        menuTrigger.addEventListener("click", openMenu);
     }
 
     return {
