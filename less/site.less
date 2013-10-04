@@ -47,17 +47,23 @@ a {
   float: left;
   top: 5px;
   left: 5px;
-  width: @menu-button-size;
-  height: @menu-button-size;
+  width: (@menu-button-size - 9);
+  height: (@menu-button-size - 5);
   border-radius: @menu-button-size / 2;
+  padding-left: 9px;
+  padding-top: 5px;
   background: @menu-background;
-  color: @menu-background;
+  color: @menu-text-color;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 #menu-trigger:hover {
-  background: lighten(@menu-background, 10%);
+  background: lighten(@menu-background, 15%);
+}
+
+#menu-trigger span {
+  display: none;
 }
 
 a#menu-name {
