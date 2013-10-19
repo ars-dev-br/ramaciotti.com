@@ -3,7 +3,7 @@ title: Sobre
 author: André Ramaciotti
 ---
 
-<p class="pull-right" style="margin-top: 0px">Última modificação: <time datetime="2012-09-22" class="timeago">2012-09-22</time></p>
+<p class="pull-right" style="margin-top: 24px">Última modificação: <time datetime="2013-10-19" class="timeago">19/10/2013</time></p>
 
 Sobre mim
 ---------
@@ -12,7 +12,7 @@ Sobre mim
 
 Meu nome é André Ramaciotti da Silva. Nasci em 1990 em São Paulo, onde cresci e
 tomei gosto por programação, música e por aprender idiomas estrangeiros.
-Atualmente, moro em Blumenau, curso Ciência da Computação na [FURB][F].
+Atualmente, moro em Blumenau e curso Ciência da Computação na [FURB][F].
 
 Já trabalhei em algumas áreas dentro do desenvolvimento de software, incluindo
 *Quality Assurance*, desenvolvimento web -- em ASP Clássico com C++, em ASP.Net
@@ -26,15 +26,13 @@ determinada linguagem até os processos envolvidos no desenvolvimento de
 software. Se eu tiver vontade de escrever sobre algum assunto off-topic,
 provavelmente o farei em outro lugar.
 
-Tecnologicamente, o site foi construido em cima do [Bootstrap][BS] e do
+Tecnologicamente, este site é um conjunto de páginas estáticas geradas pelo
 [Hakyll][H].  Se você tiver curiosidade de ver como ele foi feito, o código
 está disponível no meu [Github][GH], no repositório [ramaciotti.com][GHR]. Além
 desses dois projetos, também faço uso dos abaixo:
 
  * [Font Awesome][FA]
- * [timeago][TA]
- * [jQuery][JQ]
- * [Code Prettify][CP]
+ * [LESS][L]
 
 Sobre Software
 --------------
@@ -48,16 +46,13 @@ Os projetos em que estou trabalhando atualmente podem ser acessados pelo meu
 [github][GH].
 
 [AR]: http://archlinux.org/
-[BS]: http://twitter.github.com/bootstrap/
-[CP]: http://code.google.com/p/google-code-prettify/
 [F]: http://www.furb.br/
 [FA]: http://fortawesome.github.com/Font-Awesome/
 [GH]: http://github.com/ramaciotti
 [GHR]: https://github.com/ramaciotti/ramaciotti.com
 [H]: http://jaspervdj.be/hakyll/
-[JQ]: http://jquery.com/
+[L]: http://lesscss.org/
 [OMZ]: https://github.com/robbyrussell/oh-my-zsh
 [RSA]: /files/ramaciotti.pub
-[TA]: http://timeago.yarp.com/
 [U]: http://ubuntu.com/
 [VCF]: /files/ramaciotti.vcard
