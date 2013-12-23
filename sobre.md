@@ -3,7 +3,7 @@ title: Sobre
 author: André Ramaciotti
 ---
 
-<p class="pull-right" style="margin-top: 24px">Última modificação: <time datetime="2013-10-19" class="timeago">19/10/2013</time></p>
+<p class="pull-right" style="margin-top: 24px">Última modificação: <time datetime="2013-12-23" class="timeago">23/12/2013</time></p>
 
 Sobre mim
 ---------
