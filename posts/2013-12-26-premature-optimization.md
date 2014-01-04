@@ -80,9 +80,12 @@ PS: para quem se interessar, um [artigo][ART] um tanto mais extenso sobre o
 *benchmarks.*
 
 [^n2]: [Estes slides (PDF)][SLI] são sobre o PS3 e não sobre PCs, mas boa parte
-do que está escrito ali se aplica a qualquer arquitetura moderna.
+do que está escrito ali se aplica a qualquer arquitetura moderna.  Já
+[este PDF][WEP] e [este artigo][CM] falam sobre a arquitetura x86.
 
 [ART]: http://ubiquity.acm.org/article.cfm?id=1513451
+[CM]: http://danluu.com/3c-conflict/
 [BEN]: http://eli.thegreenplace.net/2013/12/05/the-cost-of-dynamic-virtual-calls-vs-static-crtp-dispatch-in-c/
 [QUO]: http://shreevatsa.wordpress.com/2008/05/16/premature-optimization-is-the-root-of-all-evil/
 [SLI]: http://harmful.cat-v.org/software/OO_programming/_pdf/Pitfalls_of_Object_Oriented_Programming_GCAP_09.pdf
+[WEP]: http://www.akkadia.org/drepper/cpumemory.pdf
