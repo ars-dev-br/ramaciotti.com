@@ -28,22 +28,33 @@ de sistemas operacionais baseados no Unix.
 Livros
 ------
 
-[Patterns of Enterprise Application Architecture][PEAA]: Martin Fowler cataloga
-diversos padrões de projeto úteis no desenvolvimento de aplicações orientadas a
-objetos. Embora Fowler diga que o foco maior do livro seja aplicações
-corporativas, muitos dos *patterns* têm usos em outros domínios também. Uma
-lista dos padrões apresentados no livro podem ser vistos [aqui][PEAAC].
+### Arquitetura de Software
 
 [Domain-Driven Design][DDD]: Com a utilização de orientação a objetos e *design
 patterns,* Eric Evans mostra como o código e o modelo do problema sendo
 resolvido devem ser duas partes de uma mesma coisa, e não elementos
 completamente separados.
 
-[PEAA]: http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/
+[DDD]: http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/
 
+[Patterns of Enterprise Application Architecture][PEAA]: Martin Fowler cataloga
+diversos padrões de projeto úteis no desenvolvimento de aplicações orientadas a
+objetos. Embora Fowler diga que o foco maior do livro seja aplicações
+corporativas, muitos dos *patterns* têm usos em outros domínios também. Uma
+lista dos padrões apresentados no livro podem ser vistos [aqui][PEAAC].
+
+[PEAA]: http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/
 [PEAAC]: http://www.martinfowler.com/eaaCatalog/
 
-[DDD]: http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/
+### Computação Gráfica
+
+[Learning Modern 3D Graphics Programming][LMGP]: Um ótimo material -- escrito
+por Jason L. McKesson -- para quem quer começar a mexer com computação gráfica.
+Os exemplos de código são em OpenGL, mas muitos dos conceitos se aplicam também
+ao DirectX.  Gosto mais desse livro/tutorial que daquele tijolo chamado de
+*OpenGL Superbible.*
+
+[LMGP]: http://www.arcsynthesis.org/gltut/
 
 Sites
 -----
