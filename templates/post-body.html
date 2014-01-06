@@ -7,4 +7,24 @@
 
 
 $body$
-</div>
+
+<h3>Comentários</h3>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'ramaciotti';
+  var disqus_identifier = '$url$';
+  var disqus_url = 'http://ramaciotti.com' + '$url$';
+  var disqus_title = '$title$';
+
+  (function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>
+  <p>Por favor ative JavaScript para visualizar os
+    comentários <a href="http://disqus.com/?ref_noscript">disponibilizados pelo
+    Disqus.</a></p>
+</noscript>
