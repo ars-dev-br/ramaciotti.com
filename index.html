@@ -10,7 +10,15 @@
 <section>
   <h2>Últimos Textos</h2>
 
-  <ul>$posts$</ul>
+  <ul>
+    $for(posts)$
+    <li style="margin-bottom: 12px">
+      <a href="$url$">$title$</a>
+      (<small><time datetime="$timestamp$" class="timeago">$timestamp$</time></small>) <br>
+      <small>Listado em: $posttags$</small>
+    </li>
+    $endfor$
+  </ul>
 
   <p>Ver <a href="/posts.html">todos os artigos</a></p>
 </section>
