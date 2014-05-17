@@ -71,4 +71,4 @@ por que os próprios professores não usam mais essas ferramentas?
 Para mim, é bastante decepcionante saber que eu poderia desenvolver mais, melhor
 e com menos estresse, mas não posso porque... Por que mesmo?
 
-[PNE]: http://www.pedrovereza.com/2014/01/08/programadores-nao-sabem-ensinar.html
+[PNE]: http://www.pedrovereza.com/programadores-nao-sabem-ensinar/
