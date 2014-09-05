@@ -1,35 +1,46 @@
-{-# LANGUAGE Arrows #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 module Main where
 
+import qualified Data.Map as M
+import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mconcat)
 import Prelude hiding (id)
 
 import Hakyll
 
-main :: IO ()
-main = hakyllWith config $ do
-  match ("css/*.css" .||. "files/*" .||. "font/*" .||. "img/*" .||. "js/*") $ do
-    route idRoute
-    compile copyFileCompiler
+data Blog = Blog {
+    blogPosts :: Pattern
+  , blogIndex :: Pattern
+  , blogTags :: Pattern
+  , blogSnapshot :: String
+  , blogDefault :: Identifier
+  , blogTagTitle :: String
+  , blogPostsFile :: Identifier
+  , blogPostList :: Identifier
+  , blogPostBody :: Identifier
+  , blogPostsTitle :: String
+  , blogPages :: Pattern
+  , blogRss :: Identifier
+  , blogAtom :: Identifier
+  , blogFeedConfig :: FeedConfiguration
+}
 
-  match "templates/*" $ do
-    compile templateCompiler
+buildBlog :: Blog -> Rules ()
+buildBlog blog = do
+  tags <- buildTags (blogPosts blog) (fromCapture (blogTags blog))
 
-  tags <- buildTags "posts/*" (fromCapture "tags/*.html")
-
-  match "posts/*" $ do
+  match (blogPosts blog) $ do
     route $ setExtension ".html"
     compile $ do
       pandocCompiler
-        >>= saveSnapshot "content"
-        >>= loadAndApplyTemplate "templates/post-body.html" (postCtx tags)
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= saveSnapshot (blogSnapshot blog)
+        >>= loadAndApplyTemplate (blogPostBody blog) (postCtx tags)
+        >>= loadAndApplyTemplate (blogDefault blog) defaultContext
         >>= relativizeUrls
 
   tagsRules tags $ \tag pattern -> do
-    let title = "Artigos com a tag " ++ tag
+    let title = (blogTagTitle blog) ++ tag
     route idRoute
     compile $ do
       posts <- recentFirst =<< loadAll pattern
@@ -37,48 +48,101 @@ main = hakyllWith config $ do
                 listField "posts" (postCtx tags) (return posts) <>
                 defaultContext
       makeItem ""
-        >>= loadAndApplyTemplate "templates/post-list.html" ctx
-        >>= loadAndApplyTemplate "templates/default.html" ctx
+        >>= loadAndApplyTemplate (blogPostList blog) ctx
+        >>= loadAndApplyTemplate (blogDefault blog) ctx
         >>= relativizeUrls
 
-  create ["posts.html"] $ do
+  create [blogPostsFile blog] $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
-      let ctx = constField "title" "Todos os Artigos" <>
+      posts <- recentFirst =<< loadAll (blogPosts blog)
+      let ctx = constField "title" (blogPostsTitle blog) <>
                 listField "posts" (postCtx tags) (return posts) <>
                 defaultContext
       makeItem ""
-        >>= loadAndApplyTemplate "templates/post-list.html" ctx
-        >>= loadAndApplyTemplate "templates/default.html" ctx
+        >>= loadAndApplyTemplate (blogPostList blog) ctx
+        >>= loadAndApplyTemplate (blogDefault blog) ctx
         >>= relativizeUrls
 
-  match "index.html" $ do
+  match (blogIndex blog) $ do
     route idRoute
     compile $ do
-      posts <- fmap (take 5) . recentFirst =<< loadAll "posts/*"
+      posts <- fmap (take 5) . recentFirst =<< loadAll (blogPosts blog)
       let indexContext =
             listField "posts" (postCtx tags) (return posts) <>
             field "tags" (\_ -> renderTagList tags) <>
             defaultContext
-
       getResourceBody
         >>= applyAsTemplate indexContext
-        >>= loadAndApplyTemplate "templates/default.html" indexContext
+        >>= loadAndApplyTemplate (blogDefault blog) indexContext
         >>= relativizeUrls
 
-  match ("sobre.md" .||. "recomendacoes.md") $ do
+  match (blogPages blog) $ do
     route $ setExtension ".html"
     compile $ pandocCompiler
-      >>= loadAndApplyTemplate "templates/default.html" defaultContext
+      >>= loadAndApplyTemplate (blogDefault blog) defaultContext
       >>= relativizeUrls
 
-  create ["ramaciotti.rss"] $ do
+  create [blogRss blog] $ do
     route $ idRoute
     compile $ do
-      loadAllSnapshots "posts/*" "content"
+      loadAllSnapshots (blogPosts blog) (blogSnapshot blog)
         >>= fmap (take 10) . recentFirst
-        >>= renderRss feedConfiguration feedCtx
+        >>= renderRss (blogFeedConfig blog) feedCtx
+
+  create [blogAtom blog] $ do
+    route $ idRoute
+    compile $ do
+      loadAllSnapshots (blogPosts blog) (blogSnapshot blog)
+        >>= fmap (take 10) . recentFirst
+        >>= renderAtom (blogFeedConfig blog) feedCtx
+
+main :: IO ()
+main = hakyllWith config $ do
+  match ("css/*.css" .||. "files/*" .||. "font/*" .||. "img/*" .||. "js/*") $ do
+    route idRoute
+    compile copyFileCompiler
+
+  match ("templates/*" .||. "templates-en/*") $ do
+    compile templateCompiler
+
+  match "index.html" $ do
+    route idRoute
+    compile copyFileCompiler
+
+  buildBlog $ Blog {
+                blogPosts = "posts/*"
+              , blogIndex = "index-pt.html"
+              , blogTags = "tags/*.html"
+              , blogSnapshot = "content"
+              , blogDefault = "templates/default.html"
+              , blogTagTitle = "Artigos com a tag "
+              , blogPostsFile = "posts.html"
+              , blogPostList = "templates/post-list.html"
+              , blogPostBody = "templates/post-body.html"
+              , blogPostsTitle = "Todos os Artigos"
+              , blogPages = ("sobre.md" .||. "recomendacoes.md")
+              , blogRss = "ramaciotti.rss"
+              , blogAtom = "ramaciotti.atom"
+              , blogFeedConfig = feedConfiguration
+              }
+
+  buildBlog $ Blog {
+                blogPosts = "posts-en/*"
+              , blogIndex = "index-en.html"
+              , blogTags = "tags-en/*.html"
+              , blogSnapshot = "content-en"
+              , blogDefault = "templates-en/default.html"
+              , blogTagTitle = "Articles on "
+              , blogPostsFile = "posts-en.html"
+              , blogPostList = "templates-en/post-list.html"
+              , blogPostBody = "templates-en/post-body.html"
+              , blogPostsTitle = "All Articles"
+              , blogPages = ("about.md" .||. "recomendations.md")
+              , blogRss = "ramaciotti-en.rss"
+              , blogAtom = "ramaciotti-en.atom"
+              , blogFeedConfig = feedConfiguration
+              }
 
 feedCtx :: Context String
 feedCtx = mconcat
@@ -88,8 +152,8 @@ feedCtx = mconcat
 
 postCtx :: Tags -> Context String
 postCtx tags = mconcat
-               [ modificationTimeField "modified" "%d/%m/%Y"
-               , dateField "timestamp" "%d/%m/%Y"
+               [ modificationTimeField "modified" "%Y-%m-%d"
+               , dateField "timestamp" "%Y-%m-%d"
                , tagsField "posttags" tags
                , defaultContext
                ]
@@ -106,3 +170,11 @@ feedConfiguration = FeedConfiguration {
                     , feedAuthorEmail = "andre@ramaciotti.com"
                     , feedRoot = "http://ramaciotti.com/"
                     }
+
+feedConfigurationEn = FeedConfiguration {
+                        feedTitle = "ramaciotti.com"
+                      , feedDescription = "Texts on software development."
+                      , feedAuthorName = "André Ramaciotti"
+                      , feedAuthorEmail = "andre@ramaciotti.com"
+                      , feedRoot = "http://ramaciotti.com/"
+                      }

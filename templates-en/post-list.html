@@ -1,0 +1,10 @@
+<h2>$title$</h2>
+<ul>
+  $for(posts)$
+  <li style="margin-bottom: 12px">
+    <a href="$url$">$title$</a>
+    (<small><time datetime="$timestamp$" class="timeago">$timestamp$</time></small>) <br>
+    <small>Tagged: $posttags$</small>
+  </li>
+  $endfor$
+</ul>

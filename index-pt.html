@@ -1,0 +1,29 @@
+<header><h1>André Ramaciotti</h1></header>
+
+<main>
+  <p>Olá, eu sou o <a href="/sobre.html">André</a>, um desenvolvedor de software
+  interessado em aprender coisas novas e compartilhá-las com os outros.  Você
+  também pode ler este blog em <a href="index-en.html">inglês</a>.</p>
+</main>
+
+<section>
+  <h2>Últimos textos</h2>
+
+  <ul>
+    $for(posts)$
+    <li style="margin-bottom: 12px">
+      <a href="$url$">$title$</a>
+      (<small><time datetime="$timestamp$" class="timeago">$timestamp$</time></small>) <br>
+      <small>Listado em $posttags$</small>
+    </li>
+    $endfor$
+  </ul>
+
+  <p>Ver <a href="/posts.html">todos os artigos</a></p>
+</section>
+
+<section>
+  <h2>Tags</h2>
+
+  $tags$
+</section>

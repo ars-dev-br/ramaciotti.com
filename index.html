@@ -1,30 +1,51 @@
-<header><h1>André Ramaciotti</h1></header>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'PT+Sans:400,400italic,700:latin',
+                              'Inconsolata:400,700:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,
+                                   user-scalable=no">
+    <meta name="author" content="André Ramaciotti">
+    <meta name="robots" content="follow">
 
-<main>
-  <p>Olá, eu sou o <a href="/sobre.html">André</a>, um desenvolvedor interessado
-    em processamento gráfico e performance.  Também costumo opinar sobre a
-    profissão de programador e os processos envolvidos no desenvolvimento de
-    software.</p>
-</main>
+    <title>André Ramaciotti</title>
+    <link rel="stylesheet" type="text/css" href="./css/site.min.css?v=2">
 
-<section>
-  <h2>Últimos Textos</h2>
+    <link rel="alternate" type="application/rss+xml" title="ramaciotti.com – RSS" href="./ramaciotti.rss" />
+    <link rel="alternate" type="application/atom+xml" title="ramaciotti.com – Atom" href="./ramaciotti.atom" />
 
-  <ul>
-    $for(posts)$
-    <li style="margin-bottom: 12px">
-      <a href="$url$">$title$</a>
-      (<small><time datetime="$timestamp$" class="timeago">$timestamp$</time></small>) <br>
-      <small>Listado em: $posttags$</small>
-    </li>
-    $endfor$
-  </ul>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-  <p>Ver <a href="/posts.html">todos os artigos</a></p>
-</section>
+    <style>
+      h1 { color: #fafafa; }
+      p { text-align: center; font-size: 115%; }
+      a { color: #fafafa; margin: 0px 10px; transition: all 500ms ease 0s }
+      a:hover { color: #375585; }
+    </style>
+  </head>
+  <body class="no-js">
+    <h1>Andre Ramaciotti</h1>
 
-<section>
-  <h2>Tags</h2>
-
-  $tags$
-</section>
+    <p>
+      <a href="index-en.html">English</a>
+      | <a href="index-pt.html">Português</a>
+    </p>
+  </body>
+</html>

@@ -3,41 +3,44 @@ title: Sobre
 author: André Ramaciotti
 ---
 
-<p class="pull-right" style="margin-top: 24px">Última modificação: <time datetime="2013-12-23" class="timeago">23/12/2013</time></p>
+<p style="text-align: right">
+  <a href="about.html">Read it in English</a>
+</p>
 
-Sobre mim
----------
+<p style="font-style: italic; text-align: right;">
+  Última modificação em <time datetime="2014-09-04" class="timeago">
+    2014-09-04</time></p>
 
-[<img class="pull-right" alt="qrcode com informações de contato" src="/img/ramaciotti.vcard.png" width="210" height="210"/>][VCF]
+## Sobre mim
 
 Meu nome é André Ramaciotti da Silva. Nasci em 1990 em São Paulo, onde cresci e
 tomei gosto por programação, música e por estudar outros idiomas. Atualmente,
 moro em Blumenau, trabalho na [Teclógica][T] e curso Ciência da Computação na
 [FURB][F].
 
-Já trabalhei em algumas áreas dentro do desenvolvimento de software, incluindo
-*Quality Assurance*, desenvolvimento web -- em ASP Clássico com C++, ASP.Net
-Webforms, ASP.Net MVC e JSP com JSF -- e instrutor de treinamento em C++.
+Tenho alguns anos de experiência profissional nas áreas de *quality assurance* e
+desenvolvimento de software -- principalmente com C++, C# e Java --, mas o que
+eu realmente gosto é o lado mais teórico da Ciência da Computação.
 
-Ultimamente, tenho me focado nas áreas de processamento gráfico e performance,
-além de andar refletindo sobre a profissão de programador e os processos de
-desenvolvimento de software.
+Neste blog, você encontrará textos meus sobre diferentes tópicos, escritos
+enquanto eu tento escapar do CRUD que compõe a maior parte do desenvolvimento de
+software profissional.
 
 ### Disclaimer
 
-Os textos deste site expressam apenas a minha opinião e, exceto onde escrito de
-forma explícita, não representam a opinião de onde trabalho ou de onde estudo.
+Vale o de sempre: estes textos são apenas minha opinião pessoal e não
+representam as opiniões do meu empregador atual ou anterior etc.
+
+Além disso, eu evito entrar em assuntos polêmicos, mas se você se sentir
+ofendido por alguma coisa que eu escrevi, me avise.
 
 Sobre o Site
 ------------
 
 Este site é um conjunto de páginas estáticas geradas pelo [Hakyll][H].  Se você
 tiver curiosidade de ver como ele foi feito, o código está disponível no meu
-[Github][GH], no repositório [ramaciotti.com][GHR]. Além desses dois projetos,
-também faço uso dos abaixo:
-
- * [Font Awesome][FA]
- * [LESS][L]
+[Github][GH], no repositório [ramaciotti.com][GHR].  Além do Hakyll, eu uso
+também o [Font Awesome][FA] e o [LESS][L].
 
 Sobre Software
 --------------
